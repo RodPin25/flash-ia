@@ -32,6 +32,7 @@ function FlashcardUploader() {
 
       try {
         console.log("Enviando petición POST a:", "https://flashcardsia-production.up.railway.app/process-document"); // Log antes de la petición
+        console.log("Base64 completo:", reader.result);
         const response = await axios.post("https://flashcardsia-production.up.railway.app/process-document", {
           archivo_base64: base64,
           nombre: archivo.name,
