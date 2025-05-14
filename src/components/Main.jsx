@@ -31,8 +31,8 @@ function FlashcardUploader() {
       setError("");
 
       try {
-        console.log("Enviando petición POST a:", "http://flashcardsia-production.up.railway.app/process-document"); // Log antes de la petición
-        const response = await axios.post("http://flashcardsia-production.up.railway.app/process-document", {
+        console.log("Enviando petición POST a:", "https://flashcardsia-production.up.railway.app/process-document"); // Log antes de la petición
+        const response = await axios.post("https://flashcardsia-production.up.railway.app/process-document", {
           archivo_base64: base64,
           nombre: archivo.name,
         });
@@ -59,8 +59,8 @@ function FlashcardUploader() {
     setError("");
 
     try {
-      console.log("Enviando petición POST a:", "http://flashcardsia-production.up.railway.app/process-url", { url }); // Log antes de la petición de URL
-      const response = await axios.post("http://flashcardsia-production.up.railway.app/process-url", { url });
+      console.log("Enviando petición POST a:", "https://flashcardsia-production.up.railway.app/process-url", { url }); // Log antes de la petición de URL
+      const response = await axios.post("https://flashcardsia-production.up.railway.app/process-url", { url });
       console.log("Respuesta del servidor (URL):", response.data); // Log de la respuesta exitosa de la URL
       setFlashcards(response.data);
     } catch (err) {
